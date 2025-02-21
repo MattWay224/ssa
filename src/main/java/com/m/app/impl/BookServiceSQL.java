@@ -1,41 +1,41 @@
 package com.m.app.impl;
 
 import com.m.app.model.Book;
-import com.m.app.rep.BookDao;
+import com.m.app.rep.BookRepo;
 import com.m.app.service.BookService;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 @AllArgsConstructor
-public class InMemoryBookService implements BookService {
-	private final BookDao rep;
-
-
+@Primary
+public class BookServiceSQL implements BookService {
+	private final BookRepo repo;
 	@Override
 	public List<Book> findAllBooks() {
-		return rep.findAllBooks();
+		return repo.findAll();
 	}
 
 	@Override
 	public Book saveBook(Book book) {
-		return rep.saveBook(book);
+		return repo.save(book);
 	}
 
 	@Override
 	public Book findById(int id) {
-		return rep.findById(id);
+		return repo.findById(id);
 	}
 
 	@Override
 	public Book updateBook(Book book) {
-		return rep.updateBook(book);
+		return repo.save(book);
 	}
 
 	@Override
 	public void deleteById(int id) {
-		rep.deleteById(id);
+		repo.deleteById(id);
 	}
 }

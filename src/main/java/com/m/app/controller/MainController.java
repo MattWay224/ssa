@@ -1,7 +1,7 @@
 package com.m.app.controller;
 
 import com.m.app.model.Book;
-import com.m.app.service.bookService;
+import com.m.app.service.BookService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/api/v1/books")
 @AllArgsConstructor
 public class MainController {
-	private final bookService bookService;
+	private final BookService bookService;
 
 	@GetMapping("")
 	public List<Book> findAllBooks() {

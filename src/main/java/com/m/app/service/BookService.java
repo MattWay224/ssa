@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 @Service
-public interface bookService {
+public interface BookService {
 	@GetMapping("")
 	List<Book> findAllBooks();
 
