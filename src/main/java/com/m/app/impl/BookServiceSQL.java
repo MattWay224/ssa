@@ -14,6 +14,7 @@ import java.util.List;
 @Primary
 public class BookServiceSQL implements BookService {
 	private final BookRepo repo;
+
 	@Override
 	public List<Book> findAllBooks() {
 		return repo.findAll();

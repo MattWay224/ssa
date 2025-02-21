@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.m</groupId>
     <artifactId>app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <name>spring_app</name>
     <description>spring_app</description>
     <url/>
@@ -63,6 +63,7 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
+            <version>42.7.2</version>
         </dependency>
 
         <dependency>

@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookRepo extends JpaRepository<Book, Long> {
 	void deleteById(int id);
+
 	Book findById(int id);
 }
