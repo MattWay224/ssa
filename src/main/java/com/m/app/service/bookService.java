@@ -9,5 +9,13 @@ import java.util.List;
 @Service
 public interface bookService {
 	@GetMapping("")
-	public List<Book> findAllBooks();
+	List<Book> findAllBooks();
+
+	Book saveBook(Book book);
+
+	Book findById(int id);
+
+	Book updateBook(Book book);
+
+	void deleteById(int id);
 }
